@@ -1,0 +1,707 @@
+
+    <!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="fa">
+<!--<![endif]-->
+<!-- BEGIN HEAD-->
+<head>
+<title>
+شرکت کیاتل | تنظیمات سیستم    </title>
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="keywords" content="Pbx-ip phone,مرکز تلفن ای پی">
+<meta content="Telecom Company" name="description" />
+<meta name="author" content="Kiatel Co-+982636190371">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />->
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+<!-- GLOBAL STYLES -->
+<link rel="stylesheet" href="/public/plugins/bootstrap/css/bootstrap.rtl.css" />
+<link rel="stylesheet" href="/public/css/main.css" />
+<link rel="stylesheet" href="/public/css/theme.css" />
+<link rel="stylesheet" href="/public/css/MoneAdmin.css" />
+<link rel="stylesheet" href="/public/plugins/Font-Awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="/public/css/jquery-ui.css" rel="stylesheet" />
+<link rel="stylesheet" href="/public/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+<!--END GLOBAL STYLES -->
+<!-- GLOBAL SCRIPTS -->
+<script src="/public/plugins/jquery-2.0.3.min.js"></script>
+<script src="/public/plugins/bootstrap/js/bootstrap.rtl.js"></script>
+<script src="/public/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="/public/js/jquery-ui.min.js"></script>
+<script src="/public/plugins/gritter/js/jquery.gritter.js"></script>
+<script src="/public/js/moreNoti.js"></script>
+<script src="/public/js/notifications.js"></script>
+ 
+<!-- END GLOBAL SCRIPTS -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="/public/js/html5shiv.js"></script>
+<script src="/public/js/respond.min.js"></script>
+<![endif]--><!-- PAGE LEVEL STYLES -->
+<link rel="stylesheet" href="/public/plugins/uniform/themes/default/css/uniform.default.css" />
+<link rel="stylesheet" href="/public/plugins/inputlimiter/jquery.inputlimiter.1.0.css" />
+<link rel="stylesheet" href="/public/plugins/chosen/chosen.css" />
+<link rel="stylesheet" href="/public/plugins/colorpicker/css/colorpicker.css" />
+<link rel="stylesheet" href="/public/plugins/tagsinput/jquery.tagsinput.css" />
+<link rel="stylesheet" href="/public/plugins/daterangepicker/daterangepicker-bs3.css" />
+<link rel="stylesheet" href="/public/plugins/datepicker/css/datepicker.css" />
+<link rel="stylesheet" href="/public/plugins/timepicker/css/bootstrap-timepicker.min.css" />
+<link rel="stylesheet" href="/public/plugins/switch/static/stylesheets/bootstrap-switch.css" />
+<link rel="stylesheet" href="/public/css/bootstrap-fileupload.min.css" />
+<link rel="stylesheet" href="/public/plugins/validationengine/css/validationEngine.jquery.css" />
+<link rel="stylesheet" href="/public/css/persian-datepicker.css"/>
+<!-- END PAGE LEVEL  STYLES -->
+<!-- PAGE LEVEL SCRIPT-->
+<script src="/public/js/ckeditor/ckeditor.js"></script>
+<script src="/public/plugins/uniform/jquery.uniform.min.js"></script>
+<script src="/public/plugins/inputlimiter/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="/public/plugins/chosen/chosen.jquery.min.js"></script>
+<script src="/public/plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="/public/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+<script src="/public/plugins/validVal/js/jquery.validVal.min.js"></script>
+<script src="/public/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="/public/plugins/daterangepicker/moment.min.js"></script>
+<script src="/public/plugins/datepicker/js/bootstrap-datepicker.js"></script>
+<script src="/public/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="/public/plugins/switch/static/js/bootstrap-switch.min.js"></script>
+<script src="/public/plugins/jquery.dualListbox-1.3/jquery.dualListBox-1.3.min.js"></script>
+<script src="/public/plugins/autosize/jquery.autosize.min.js"></script>
+<script src="/public/plugins/jasny/js/bootstrap-inputmask.js"></script>
+<script src="/public/plugins/jasny/js/bootstrap-fileupload.js"></script>
+<script src="/public/js/formsInit.js"></script>
+<script src="/public/plugins/validationengine/js/jquery.validationEngine.js"></script>
+<script src="/public/plugins/validationengine/js/languages/jquery.validationEngine-fa.js"></script>
+<script src="/public/plugins/jquery-validation-1.11.1/dist/jquery.validate.min.js"></script>
+<script src="/public/js/validationInit.js"></script>
+<script src="/public/plugins/jquery-validation-1.11.1/localization/messages_fa.js" type="text/javascript"></script>
+<script src="/public/js/persian-date.js"></script>
+<script src="/public/js/persian-datepicker.js"></script>
+<script>
+	/*$(function() {
+		formValidation();
+	});
+	$(function() {
+		formInit();
+	});*/ 
+	$(document).ready(function() {
+		formValidation();
+		formInit();
+        $('.DatePick').persianDatepicker({
+            autoClose : true,
+            initialValueType : 'gregorian',
+             format : 'HH:mm YYYY/MM/DD',
+             //format : '(X)HH:mm_YYYY/MMMM/DD',
+            calendar : {
+                persian : {
+                    locale : 'fa'
+                }
+            },
+            timePicker : {
+                enabled : true,
+                meridiem : {
+                    enabled : true
+                }
+            },
+        });
+        /*$('.alt-field-example').persianDatepicker({
+            autoClose : true,
+            formatter : function(unix) {
+                return 'selected unix: ' + unix;
+            }
+        });*/
+    }); 
+</script>
+
+<!--END PAGE LEVEL SCRIPT--><script>
+	$(document).ready(function () {
+		Notifications();
+              
+         return false;
+         
+            			});	 	
+</script>
+</head>
+<!-- END  HEAD-->
+<!-- BEGIN BODY-->
+<body class="padTop53 "  >
+    <!-- MAIN WRAPPER -->
+    <div id="wrap">
+        <!-- HEADER SECTION -->
+<div id="top">
+	<nav class="navbar navbar-inverse navbar-fixed-top " style="padding: 10px;">
+		<a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle"> <i class="icon-align-justify"></i> </a>
+		<!-- LOGO SECTION -->
+		<header class="navbar-header">
+			<a href="index.php" class="navbar-brand"> <img src="/public/img/logo.png" alt="" height="30" /> <h1 class="site-title">مرکز تلفن کیاتل </h1> </a>
+		</header>
+		<!-- END LOGO SECTION -->
+		<ul class="nav navbar-top-links navbar-left">
+			<!-- MESSAGES SECTION -->
+			
+						<!--END MESSAGES SECTION -->
+			<!--TASK SECTION -->
+						<!--END TASK SECTION -->
+			<!--ALERTS SECTION -->
+						<!-- END ALERTS SECTION -->
+			<!--ADMIN SETTINGS SECTIONS -->
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="icon-user "></i>&nbsp; <i class="icon-chevron-down "></i> </a>
+				<ul class="dropdown-menu dropdown-user">
+					<li>
+						<a href=""data-toggle="modal" data-target="#formModal"><i class="icon-user"></i>  مشاهده پروفایل</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="/logout"><i class="icon-signout"></i> خروج</a>
+					</li>
+				</ul>
+			</li>
+			<!--END ADMIN SETTINGS -->
+		</ul>
+	</nav>
+</div>        <!-- END HEADER SECTION -->
+        <!-- MENU SECTION -->
+<div id="right">
+    <div class="media user-media well-small">
+        <!--<a class="user-link" href="/index"> <img class="media-object img-circle user-img" width="64px" height="64px" alt="User Picture" src="/public/img/picture.gif" /> </a>-->
+        <br />
+        <div class="media-body">
+            <h5 class="media-heading">
+            <p> جناب   آقای Kiatel Co  خوش آمدید</p></h5>
+        </div>
+        <br />
+    </div>
+    <ul id="menu" class="collapse">
+        <li class="panel"><a href="/index" > <i class="icon-dashboard"></i>  صفحه اصلی </a></li>
+                    <li class="panel ">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-monitoring">
+                            <span class="pull-Left">
+                                <i class=" icon-double-angle-left"></i>
+                            </span>
+                            <i class="icon-eye-open"></i> &nbsp; نظارت                                                    
+                        </a>
+                        <ul class="collapse" id="form-monitoring">
+                            <li class=""><a href="/monitoring/status"><i class="icon-desktop"></i>  سیستم       </a></li>
+                                <li class=""><a href="/monitoring/pbx"><i class="icon-phone-sign"></i> مرکز تلفن   </a></li>                               
+                        </ul>
+            </li>
+                            <li><a href="/setting"><i class="icon-cog"></i> &nbsp; تنظیمات  </a></li>
+            <li><a href="/tools"><i class="icon-cogs"></i> &nbsp; ابزار  </a></li>
+                    
+            <li class="panel ">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-nav">
+                            <span class="pull-Left">
+                                <i class=" icon-double-angle-left"></i>
+                            </span>
+                            <i class="icon-phone"></i> &nbsp; مرکز تلفن                                                  
+                        </a>
+                        <ul class="collapse" id="form-nav">
+                             
+                                <li class=""><a href="/extensions"><i class=" icon-signal"></i> داخلی ها </a></li>
+                                                   
+                            <li class=""><a href="/trunks"><i class=" icon-retweet"></i> درگاه ها </a></li>
+                            <li class=""><a href="/DialRoute"><i class=" icon-truck"></i> مسيريابي تماس </a></li>
+                                                    
+                                <li class=""><a href="/ivr"><i class="icon-certificate"></i> پاسخگوي خودكار </a></li>
+                                <li class=""><a href="/playlists"><i class="icon-music"></i>  آوای انتظار           </a></li>
+                                                        <!--<li class=""><a href="/voicemail"><i class=" icon-briefcase"></i> صندوق صوتی    </a></li>-->
+                        </ul>
+            </li>
+                    
+            <li class="panel ">
+                        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-group">
+                            <span class="pull-Left">
+                                <i class=" icon-double-angle-left"></i>
+                            </span>
+                            <i class="icon-group"></i> &nbsp; گروه ها                                                  
+                        </a>
+                        <ul class="collapse" id="form-group">
+                            <li class=""><a href="/group"><i class=" icon-key"></i> گروه  كاربري </a></li>
+                              
+                                <li class=""><a href="/InboundCallGroup"><i class=" icon-level-down"></i> گروه داخلی     </a></li>
+                                <li class=""><a href="/OutboundDialGroup"><i class="icon-level-up"></i> گروه تماس </a></li>
+                                
+                                                   </ul>
+            </li>
+          
+                                     
+            <li><a href="/reports"><i class="icon-warning-sign"></i> &nbsp; گزارشات </a></li>
+            
+        <!--<li class="panel ">
+                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-log">
+                        <span class="pull-Left">
+                            <i class=" icon-double-angle-left"></i>
+                        </span>
+                        <i class="icon-warning-sign"></i> &nbsp; گزارشات                                                  
+                    </a>
+                    <ul class="collapse" id="form-log">
+                        <li class=""><a href="/reports/calllog"><i class=" "></i> گزارش تماس  </a></li>
+                        <li class=""><a href="/reports/reg"><i class=""></i>   مشاهده هسته درگاه      </a></li>
+                        <li class=""><a href="/reports/web"><i class=""></i> گزارش عملکرد  </a></li>
+                        <li class=""><a href="/reports/system"><i class=""></i> مشاهده هسته مرکز  </a></li>
+                        
+                    </ul>
+        </li>-->
+                	        <li class="panel ">
+	                    <!--<a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-UserPortable">
+	                        <span class="pull-Left">
+	                            <i class=" icon-double-angle-left"></i>
+	                        </span>
+	                        
+	                            <i class="icon-user"></i> &nbsp; پرتال کاربران       	                    </a>-->
+	                    <ul class="collapse" id="form-UserPortable">
+	                        <li class=""><a href="/UserPortable/Logs"><i class="icon-warning-sign"></i> گزارشات </a></li>                        
+	                    </ul>
+	        </li> 
+	                                                                                         
+        <li><a href="/logout"><i class="icon-signout"></i> &nbsp;  خروج </a></li>
+    </ul>
+
+</div>
+        <!--END MENU SECTION -->
+
+        <!--PAGE CONTENT -->
+        <div id="content">
+            <div class="inner" style="min-height:1200px;">
+            	<div class="row">
+                                        <div class="col-lg-12"> 
+                    	<h4></h4>                   	
+                        <h4>تنظیمات سیستم</h4>
+                    </div>
+                                        
+                </div>
+                <hr />
+                        <!-- start:page content-->
+
+<style>
+#countup p {
+  display: inline-block;
+  padding: 5px;
+  background: #CCC;
+  margin: 0 0 20px;
+  direction:ltr;
+}
+</style>
+<script>
+/*
+* Basic Count Up from Date and Time
+* Author: @mrwigster / trulycode.com
+*/
+window.onload=function() {
+  upTime(); 
+}
+function upTime() {
+  time = new Date("2018-07-31 06:47:51").getTime(); // ****** Change this line!
+  now = new Date().getTime();
+  countTo = new Date(time);
+  difference = (now-countTo);
+
+  days=Math.floor(difference/(60*60*1000*24)*1);
+  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+
+  document.getElementById('days').firstChild.nodeValue = days;
+  document.getElementById('hours').firstChild.nodeValue = hours;
+  document.getElementById('minutes').firstChild.nodeValue = mins;
+  document.getElementById('seconds').firstChild.nodeValue = secs;
+
+  clearTimeout(upTime.to);
+  upTime.to=setTimeout(function(){ upTime(); },1000);
+}
+</script>
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">&nbsp;</div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                                <!-- start collapse--> 
+                               <!-- <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Zerocollapse">اطلاعات مرکز     </a>
+                                        </h4>
+                                    </div>
+                                    <div id="Zerocollapse" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                           <div id="Zerocollapse" class="accordion-body collapse in body">
+                                    نسخه نرم افزاری =۱.۰.۰.۰                                    <br />
+                                      مدت زمان آغاز به کار         =                                    
+	                                    <div id="countup"style="direction:ltr; important">
+										  <p id="days">00</p>
+										  <p class="timeRefDays">days</p>
+										  <p id="hours">00</p>
+										  <p class="timeRefHours">hours</p>
+										  <p id="minutes">00</p>
+										  <p class="timeRefMinutes">minutes</p>
+										  <p id="seconds">00</p>
+										  <p class="timeRefSeconds">second</p>
+										</div>
+										
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <!-- start collapse--> 
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseZero"> سیستم      </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseZero" class="panel-collapse collapse ">                                    	 	
+                                        <div class="panel-body">
+                                           <div id="collapseZero" class="accordion-body collapse in body">
+                                           	<div class="row">
+                    						<div class="col-lg-6">
+                    							<form action="/setting/NameNode" method="post"   enctype="multipart/form-data" class="form-horizontal" id="block-validate" >
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-4">نام مرکز    </label>
+                                            <div class="col-lg-4">
+                                                <input type="text" style="direction:ltr; important" id="required2" name="NameNode" class="form-control" value="Kiatel-Pure" required="required"/>
+                                            </div>
+                                        </div> 
+                                        <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                        <button  type="submit" name="langform" value="ذخیره " class="btn btn-success  " >ذخیره</button>            
+                                        </div> 
+                                    			</form>
+											</div>
+											<div class="col-lg-6">
+												<form action="/setting/TimeChange" method="post"   enctype="multipart/form-data" class="form-horizontal" id="block-validate" >
+                                                <!--<div class="form-group">
+                                                   <label class="control-label col-lg-4">تاریخ و ساعت  سرور  </label>
+                                                   <div class="col-lg-3">
+                                                      <p> ۱۳۹۷/۷/۴-۱۶:۱۲:۰۱</p>
+                                                   </div>
+                                               </div>-->
+                                              <div class="form-group">
+                                                   <label class="control-label col-lg-4">تاریخ و ساعت  </label>
+                                                   <div class="col-lg-4">
+                                                      <input type="text"  name="Time" class="form-control DatePick initial-value-type-gregorian-example"  value="1537965721" required="required"  />
+                                                   </div>
+                                               </div>
+                                               <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                                    <button  type="submit" name="extentionadd" value="ارسال   " class="btn btn-success  " >ارسال  </button>                                                    
+                                                </div>
+                                            </form>
+											</div>
+											
+                    					</div>
+                    					<div class="row">
+                    						<div class="col-lg-3"></div>
+                    						<div class="col-lg-6">
+												 <p><br>
+                                            <!--<button class="btn"><i class="icon-dropbox"></i> تهیه نسخه پشتیبان   </button>
+                                            <button class="btn"><i class="icon-dropbox"></i> فرایند بازیابی </button>
+                                            <button class="btn btn-inverse"><i class="icon-refresh icon-white"></i> به روزرسانی </button>-->
+                                            <a onclick="return confirm('آیامطمئن هستید؟؟؟  ');" href="/setting/restart" ><button class="btn btn-primary"><i class="icon-meh icon-white"></i> راه اندازی مجدد</button></a>
+                                            <a onclick="return confirm('آیامطمئن هستید؟؟؟  ');" href="/setting/ShutDown" ><button class="btn btn-danger"><i class="icon-frown icon-white"></i> خاموش کردن </button></a>
+                                            <a onclick="return confirm('آیامطمئن هستید؟؟؟  ');" href="/setting/QuickSetup" ><button class="btn btn-info"><i class="icon-refresh  icon-white"></i> تنظیمات پیش فرض</button></a>
+                                            </p>
+											</div>
+											<div class="col-lg-3"></div>
+                    					</div>
+                                    
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- start collapse--> 
+                                <!--<div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> انتخاب زبان</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                           <div id="collapseOne" class="accordion-body collapse in body">
+                                    <form action="/#" method="post"   enctype="multipart/form-data" class="form-horizontal" id="block-validate" >
+                                        
+                                    <div class="form-group">
+                                        <label> انتخاب زبان</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="lang" id="optionsRadiosInline1" value="fa" checked="checked" /><img width="50px" height="30px" src="/public/img/fa.jpg" > 
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="lang" id="optionsRadiosInline2" value="en" /><img  width="50px" height="30px" src="/public/img/en.jpg" >
+                                        </label>                                            
+                                    </div>
+                                    <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                        <button  type="submit" name="langform" value="ذخیره " class="btn btn-success  " >ذخیره</button>            
+                                        <a  class="btn btn-info " href="/setting" >انصراف   </a>
+                                    </div>                                          
+                                
+                                    </form>
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">تاریخ و ساعت </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">تنظیمات کلی سیستم   </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                           
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">شبکه </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          
+                       
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#home" data-toggle="tab">مرکز تلفن</a>
+                                </li>
+                                                                <li><a href="#profile" data-toggle="tab">مبدل  صدا   </a>
+                                </li>
+                                                                <li><a href="#messages" data-toggle="tab">سرورهای نام   </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="home">
+                                    <p>
+                                      <form action="/setting/NetworkChange"  role="form" class="form-horizontal" method="post" id="popup-validation" enctype="multipart/form-data" >
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-4"> کارت  شبکه  </label>
+                                                        <div class="col-lg-4" >
+                                                            <input type="text" style="direction:ltr; important " id="required2" name="name" class="form-control" required="required" value="eth1" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label class="control-label col-lg-4">آدرس شبکه </label>
+                                                            <div class=" col-lg-4">
+                                                                <input style="direction: ltr;"  class="validate[required,custom[ipv4]] form-control" type="text" name="address" id="ip" value="192.168.22.101" required="required"/>
+                                                            </div>
+                                                    </div>                                 
+                                                    <div class="form-group">
+                                                            <label class="control-label col-lg-4">شناسه    شبکه  </label>
+                                                            <div class=" col-lg-4">
+                                                                <input style="direction: ltr;" value="255.255.255.0" class="validate[required,custom[ipv4]] form-control" type="text" name="subnet" id="ip" required="required"/>
+                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label class="control-label col-lg-4">درگاه   شبکه  </label>
+                                                            <div class=" col-lg-4">
+                                                                <input  style="direction: ltr;" value="192.168.22.10" class="validate[required,custom[ipv4]] form-control" type="text" name="gateway" id="ip" required="required"/>
+                                                            </div>
+                                                    </div>
+                                                    <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                                        <button  type="submit" name="network" value="ذخیره " class="btn btn-success  " >ذخیره</button>            
+                                                        
+                                                    </div>    
+                                        </form> 
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                   <form action="/setting/RTPChange"  role="form" class="form-horizontal" method="post" id="popup-validation" enctype="multipart/form-data" >
+                                   	<div class="form-group">
+                                            <label class="control-label col-lg-4">آدرس شبکه  </label>
+                                            <div class=" col-lg-4">
+                                                <input  style="direction: ltr;" value="" class="validate[required,custom[ipv4]] form-control" type="text" name="rtp_dsp_ip" id="ip" required="required"/>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">آدرس  سخت افزار    </label>
+                                            <div class=" col-lg-4">
+                                                <input  style="direction: ltr;" value="" class=" form-control" type="text" name="rtp_dsp_mac" id="ip" required="required"/>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">درگاه    رسانه   </label>
+                                            <div class=" col-lg-4">
+                                                <input style="direction: ltr;" value="" class="validate[required,custom[ipv4]] form-control" type="text" name="rtp_mg_ip" id="ip" required="required"/>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">درگاه   شبکه  </label>
+                                            <div class=" col-lg-4">
+                                                <input  style="direction: ltr;" value="" class="validate[required,custom[ipv4]] form-control" type="text" name="rtp_gw_ip" id="ip" required="required"/>
+                                            </div>
+                                    </div>                                 
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">شناسه    شبکه  </label>
+                                            <div class=" col-lg-4">
+                                                <input style="direction: ltr;" value="" class="validate[required,custom[ipv4]] form-control" type="text" name="rtp_dsp_netmask" id="ip" required="required"/>
+                                            </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                        <button  type="submit" name="network" value="ذخیره " class="btn btn-success  " >ذخیره</button>            
+                                        
+                                    </div>    
+                                </form>
+                                </div>
+                                <div class="tab-pane fade" id="messages">
+                                    <form action="/setting/DNSChange"  role="form" class="form-horizontal" method="post" id="popup-validation" enctype="multipart/form-data" >
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">سرور نام اصلی   </label>
+                                            <div class=" col-lg-4">
+                                                <input style="direction: ltr;" value="8.8.8.8" class="validate[required,custom[ipv4]] form-control" type="text" name="dns1" id="ip" required="required"/>
+                                            </div>
+                                    </div>                                 
+                                    <div class="form-group">
+                                            <label class="control-label col-lg-4">سرور نام جايگزين    </label>
+                                            <div class=" col-lg-4">
+                                                <input style="direction: ltr;" value="4.2.2.6
+" class="validate[required,custom[ipv4]] form-control" type="text" name="dns2" id="ip" required="required"/>
+                                            </div>
+                                    </div>
+                                    <div class="form-actions no-margin-bottom" style="text-align:center;">
+                                        <button  type="submit" name="network" value="ذخیره " class="btn btn-success  " >ذخیره</button>            
+                                        
+                                    </div>    
+                                </form>
+                                </div>
+                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">  مديريت كارت ها  </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <div class="row">
+                        <div class="col-lg-12">
+                            
+                             <div class="panel-heading">			      
+				    				<a href="/setting/cards_add " class="btn btn-block btn-primary">افزودن    کارت </a>				    
+								</div>    
+                                                          
+                            
+                                <div class="table-responsive  ">
+                                    <table class="table  table-bordered table-hover dataTables-example" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th width="6%">ردیف  </th>
+                                                <th>شماره    کارت </th>
+                                                <th> فعال  </th>
+                                                 <!--<th >پیکربندی کارتها  </th>-->
+                                                <th>  آخرین کارکرد </th>                                                
+                                                <th>نوع   کارت </th>
+                                                <th>  نسخه کارت </th>
+                                                <th>ویرایش </th>
+                                                <th>حذف </th>                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                                                                </tbody>
+                                    </table>                                                                                 
+                            </div>
+                        </div>
+                    </div>
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix">قابلیت های سیستم   </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsesix" class="panel-collapse collapse ">                                    	 	
+                                        <div class="panel-body">
+                                           	<div id="collapsesix" class="accordion-body collapse in body">
+                                           	<p>
+                                           		
+                                           	</p>                    							                                    
+                                			</div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end:page content-->
+</div>
+</div>
+<!--END PAGE CONTENT -->
+</div>
+<!--END MAIN WRAPPER -->
+<!-- FOOTER -->
+<div class="col-lg-12">
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H2">پروفایل کاربر    </h4>
+                </div>
+                <div class="modal-body">
+
+                        <br>
+                        <div class="form-group">
+                            <label>نام و    نام خانوادگی :  </label>
+                             Kiatel Co                        </div>
+                        <div class="form-group">
+                            <label>جنسیت :  </label>
+                             مرد                        </div>
+                        <div class="form-group">
+                            <label> شماره داخلی :  </label>
+                             1000                        </div>
+                        <div class="form-group">
+                            <label> پست الکترونیکی   :  </label>
+                             info@kiatelco.com                        </div>
+                        <div class="form-group">
+                            <label>شماره همراه  :   </label>
+                             0                        </div>
+                </div>
+                <div class="modal-footer">
+                    
+                        <a href="/UserPortable/profile_user_edit" type="button" class="btn btn-primary"> ویرایش اطلاعات     </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                         بستن                          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<p>
+		<strong>Copyright &copy; 1989- 2018 		<a href="http://kiatelco.com">Kiatel Co</a>.</strong> All rights reserved.
+	</p>
+</div>
+<!--END FOOTER -->
+ 
+</body>
+<!-- END BODY-->
+</html>
